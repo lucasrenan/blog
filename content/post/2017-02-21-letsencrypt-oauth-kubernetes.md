@@ -87,7 +87,7 @@ spec:
         - --nginx-configmap=nginx-ingress/nginx-ingress-controller
 ```
 
-### Adding OAuth 2 Protection
+### Adding Oauth 2 Authentication
 
 It's relatively important to not expose your internal dashboards and services
 to the outside world without authentication, but <a rel="nofollow" href="https://github.com/bitly/oauth2_proxy">oauth2 proxy</a> makes this super simple. We like to
