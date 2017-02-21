@@ -5,10 +5,10 @@ author: Ian Chiles
 github: fortytw2
 ---
 
-In mid-August 2016, fromAtoB switched from running on a few hand-managed bare-metal servers to [Google Cloud Platform](https://cloud.google.com/) (GCP), using [saltstack](https://saltstack.com/), [packer](https://www.packer.io/), and [terraform](https://www.terraform.io/) to
+In mid-August 2016, fromAtoB switched from running on a few hand-managed bare-metal servers to <a rel="nofollow" href="https://cloud.google.com/">Google Cloud Platform</a> (GCP), using <a rel="nofollow" href="https://saltstack.com/">saltstack</a>, <a rel="nofollow" href="https://www.packer.io/">packer</a>, and <a rel="nofollow" href="https://www.terraform.io/">terraform</a> to
 programmatically define and manage our infrastructure. After this migration, it
-was relatively straightforward to setup and expose our internal services such as [kibana](https://www.elastic.co/products/kibana),
-[grafana](http://grafana.org/), and [prometheus](https://prometheus.io/) to the internet at large with a small set of salt states
+was relatively straightforward to setup and expose our internal services such as <a rel="nofollow" href="https://www.elastic.co/products/kibana">kibana</a>,
+<a rel="nofollow" href="http://grafana.org/">grafana</a>, and <a rel="nofollow" href="https://prometheus.io/">prometheus</a> to the internet at large with a small set of salt states
 that managed `oauth2_proxy`, `nginx`, and `lego` on individual machines running
 the services managed by systemd.
 
@@ -31,7 +31,7 @@ On GCP, the HTTP load balancers do not support TLS-SNI, which means you need a
 new frontend IP address per SSL certificate you have. For internal services, this
 is a pain, as you cannot point a wildcard DNS entry to a single IP, like `*.fromatob.com`
 and then have everything _just work_. Luckily, we realized that using a TCP
-load balancer with the [Nginx Ingress Controller](https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx)
+load balancer with the <a rel="nofollow" href="https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx">Nginx IngressController</a>)
 would work just as well, but support TLS-SNI no problem.
 
 Setting this up was simple, using a Kubernetes `DaemonSet` to place a copy of
@@ -90,7 +90,7 @@ spec:
 ### Adding OAuth2 Protection
 
 It's relatively important to not expose your internal dashboards and services
-to the outside world without authentication, but [oauth2 proxy](https://github.com/bitly/oauth2_proxy) makes this super simple. We like to
+to the outside world without authentication, but <a rel="nofollow" href="https://github.com/bitly/oauth2_proxy">oauth2 proxy</a> makes this super simple. We like to
 run it inside the same Pod that manages our service deployment - for Kibana this
 means our deployment looks like
 
@@ -164,7 +164,7 @@ spec:
 ### Adding LetsEncrypt
 
 Fortunately for us, integrating LetsEncrypt with Kubernetes via the Nginx Ingress
-Controller is easy, thanks to the fantastic [kube-lego](https://github.com/jetstack/kube-lego) which automatically provisions
+Controller is easy, thanks to the fantastic <a rel="nofollow" href="https://github.com/jetstack/kube-lego">kube-lego</a> which automatically provisions
 SSL certificates for Kubernetes `Ingress` Resources with the addition of a few
 simple annotations.
 
@@ -199,9 +199,9 @@ spec:
 ### Conclusion
 
 With the right setup, it's super easy to expose protected, HTTPS resources from
-Kubernetes, if you just want to copy our setup, the manifests we use in production are available on [GitHub](https://github.com/fromatob/manifests).
+Kubernetes, if you just want to copy our setup, the manifests we use in production are available on <a rel="nofollow" href="https://github.com/fromatob/manifests">GitHub</a>.
 
-Going forward, we want to investigate setting up [mate](https://github.com/zalando-incubator/mate) to
+Going forward, we want to investigate setting up <a rel="nofollow" href="https://github.com/zalando-incubator/mate">mate</a> to
 automatically provision DNS records from the very same
 `Ingress` resources that manage everything else, and switch our main production site to use the same style of
 ingress as everything else within Kubernetes.
