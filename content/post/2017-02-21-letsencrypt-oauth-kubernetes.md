@@ -1,5 +1,5 @@
 ---
-title:  Lets Encrypt, OAuth2, and Kubernetes Ingress
+title:  Let's Encrypt, OAuth 2, and Kubernetes Ingress
 date: 2017-02-21
 author: Ian Chiles
 github: fortytw2
@@ -21,7 +21,7 @@ built and pushed during CI. However, everything went rather smoothly in the end.
 Next, we wanted to migrate our internal services to run within Kubernetes, too -
 but we did not have an easy solution to managing Ingress, our Rails application
 ran as a `NodePort` service connected to a terraform managed GCP HTTP Load Balancer,
-which had all of our main site SSL certificates. Marrying this setup to LetsEncrypt
+which had all of our main site SSL certificates. Marrying this setup to Let's Encrypt
 would not have been very easy, as the GCP HTTP Load Balancer does not support TLS-SNI 
 (at the time of this article).
 
@@ -87,7 +87,7 @@ spec:
         - --nginx-configmap=nginx-ingress/nginx-ingress-controller
 ```
 
-### Adding OAuth2 Protection
+### Adding OAuth 2 Protection
 
 It's relatively important to not expose your internal dashboards and services
 to the outside world without authentication, but <a rel="nofollow" href="https://github.com/bitly/oauth2_proxy">oauth2 proxy</a> makes this super simple. We like to
@@ -161,15 +161,15 @@ spec:
     app: kibana
 ```
 
-### Adding LetsEncrypt
+### Adding Let's Encrypt
 
-Fortunately for us, integrating LetsEncrypt with Kubernetes via the Nginx Ingress
+Fortunately for us, integrating Let's Encrypt with Kubernetes via the Nginx Ingress
 Controller is easy, thanks to the fantastic <a rel="nofollow" href="https://github.com/jetstack/kube-lego">kube-lego</a> which automatically provisions
 SSL certificates for Kubernetes `Ingress` Resources with the addition of a few
 simple annotations.
 
 After setting up the appropriate service and deployment for Kibana, simply
-creating an `Ingress` resource results in the Nginx being set up and a LetsEncrypt
+creating an `Ingress` resource results in the Nginx being set up and a Let's Encrypt
 certificate provisioned for the domain.
 
 ```yml
