@@ -1,0 +1,10 @@
+languageCode = "en-us"
+title = "fromAtoB Engineering"
+baseurl = "https://eng.fromatob.com/"
+
+[Author]
+  github = "fromAtoB"
+  twitter = "fromatob_eng"
+
+[permalinks]
+  post = "/post/:year/:month/:title/"
