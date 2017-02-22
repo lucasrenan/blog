@@ -205,3 +205,5 @@ Going forward, we want to investigate setting up <a rel="nofollow" href="https:/
 automatically provision DNS records from the very same
 `Ingress` resources that manage everything else, and switch our main production site to use the same style of
 ingress as everything else within Kubernetes.
+
+Want to work with us? Email join-our-team@fromatob.com 
