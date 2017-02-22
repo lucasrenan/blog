@@ -13,10 +13,10 @@
       <h2 class="{{ .Type }}-subheading">{{ .Params.subtitle }}</h2>
       {{ end }}
       {{ end }}
-      
+
       {{ if eq .Type "post" }}
-      <span class="post-meta">Posted on {{ .Date.Format "2 Jan 2006" }} by 
-        <a href="https://github.com/{{ .Params.github }}"> {{ .Params.author }} </a>
+      <span class="post-meta">Posted on {{ .Date.Format "2 Jan 2006" }} by
+        <a rel="nofollow" href="https://github.com/{{ .Params.github }}"> {{ .Params.author }} </a>
       </span>
       {{ end }}
         </div>
