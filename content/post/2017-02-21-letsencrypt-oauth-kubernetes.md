@@ -34,9 +34,9 @@ and then have everything _just work_. Luckily, we realized that using a TCP
 load balancer with the <a rel="nofollow" href="https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx">Nginx IngressController</a>
 would work just as well, and support TLS-SNI no problem.
 
-Setting this up was simple, using a Kubernetes `DaemonSet` to place a copy of
-the ingress controller on each pod, then pointing a TCP Load Balancer and
-appropriate HealthCheck to each GKE instance we run.
+Setting this up was straightforward, by creating a Kubernetes `DaemonSet` that runs
+the IngressController on every node, and then pointing a TCP Load Balancer+HealthCheck
+to each GKE instance we run.
 
 ```yml
 apiVersion: extensions/v1beta1
@@ -89,8 +89,8 @@ spec:
 
 ### Adding Oauth 2 Authentication
 
-It's relatively important to not expose your internal dashboards and services
-to the outside world without authentication, but <a rel="nofollow" href="https://github.com/bitly/oauth2_proxy">oauth2 proxy</a> makes this super simple. We like to
+It's relatively important to expose your internal dashboards and services
+to the outside world with authentication, and <a rel="nofollow" href="https://github.com/bitly/oauth2_proxy">oauth2 proxy</a> makes this super simple. We like to
 run it inside the same Pod that manages our service deployment - for Kibana this
 means our deployment looks like
 
