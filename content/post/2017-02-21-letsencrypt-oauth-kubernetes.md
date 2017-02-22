@@ -31,7 +31,7 @@ On GCP, the HTTP load balancers do not support TLS-SNI, which means you need a
 new frontend IP address per SSL certificate you have. For internal services, this
 is a pain, as you cannot point a wildcard DNS entry to a single IP, like `*.fromatob.com`
 and then have everything _just work_. Luckily, we realized that using a TCP
-load balancer with the <a rel="nofollow" href="https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx">Nginx IngressController</a>
+load balancer with the <a rel="nofollow" href="https://github.com/kubernetes/ingress">Nginx IngressController</a>
 would work just as well, and support TLS-SNI no problem.
 
 Setting this up was straightforward, by creating a Kubernetes `DaemonSet` that runs
