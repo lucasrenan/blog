@@ -206,4 +206,6 @@ automatically provision DNS records from the very same
 `Ingress` resources that manage everything else, and switch our main production site to use the same style of
 ingress as everything else within Kubernetes.
 
-Want to work with us? Email join-our-team@fromatob.com 
+<hr>
+
+_Want to work with Ian? <a href="mailto:join-our-team@fromatob.com">Say Hi!</a>_
