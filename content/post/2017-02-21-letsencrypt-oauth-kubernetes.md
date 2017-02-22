@@ -13,13 +13,13 @@ that managed `oauth2_proxy`, `nginx`, and `lego` on individual machines running
 the services managed by systemd.
 
 Then, mid-September, we migrated our Ruby on Rails code to run within Kubernetes
-on Google Container Engine (GKE) - this was a big change for us on almost all parts of
-the stack - deployments no longer worked with `Capistrano`, but via `kubectl`,
+on Google Container Engine (GKE). This was a big change for us on almost all parts of
+the stack, as deployments no longer worked with `Capistrano`, but via `kubectl`,
 and our CI setup had to change dramatically to allow for docker images to be
 built and pushed during CI. However, everything went rather smoothly in the end.
 
 Next, we wanted to migrate our internal services to run within Kubernetes, too -
-but we did not have an easy solution to managing Ingress, our Rails application
+but we did not have an easy solution to managing Ingress. The Rails application
 ran as a `NodePort` service connected to a terraform managed GCP HTTP Load Balancer,
 which had all of our main site SSL certificates. Marrying this setup to Let's Encrypt
 would not have been very easy, as the GCP HTTP Load Balancer does not support TLS-SNI 
@@ -31,8 +31,8 @@ On GCP, the HTTP load balancers do not support TLS-SNI, which means you need a
 new frontend IP address per SSL certificate you have. For internal services, this
 is a pain, as you cannot point a wildcard DNS entry to a single IP, like `*.fromatob.com`
 and then have everything _just work_. Luckily, we realized that using a TCP
-load balancer with the <a rel="nofollow" href="https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx">Nginx IngressController</a>)
-would work just as well, but support TLS-SNI no problem.
+load balancer with the <a rel="nofollow" href="https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx">Nginx IngressController</a>
+would work just as well, and support TLS-SNI no problem.
 
 Setting this up was simple, using a Kubernetes `DaemonSet` to place a copy of
 the ingress controller on each pod, then pointing a TCP Load Balancer and
