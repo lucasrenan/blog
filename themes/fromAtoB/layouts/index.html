@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  {{ partial "head.html" . }}
+
+  <body id="page-top">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W323XNJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {{ partial "nav.html" . }}
+
+    <header class="home-header">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1>Help people find the best way to go!</h1>
+          <hr>
+          <p>
+            You love to travel, are full of ambition, and want to make a big impact? At fromAtoB we're helping people find the fastest and cheapest way to get from A to B.
+          </p>
+          <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">fromAtoB Engineering</h2>
+            <hr class="light">
+            <p class="text-faded">
+              We are an autonomous, healthy, and fast paced engineering team. Together we are shaping the travel industry's transportation field. We use nice technologies such as Ruby on Rails, Go, Vue.js, Spark, Kubernetes and many others.
+            </p>
+            <a href="#values" class="page-scroll btn btn-default btn-xl sr-button">Check our values</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="values">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">We value</h2>
+            <hr class="primary">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-gears text-primary sr-icons"></i>
+              <h3>Quality</h3>
+              <p class="text-muted">We fight tooth and nail for good code. Quality runs in our veins.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-bar-chart text-primary sr-icons"></i>
+              <h3>Data</h3>
+              <p class="text-muted">We are a data driven engineering team. Metrics everywhere.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-book text-primary sr-icons"></i>
+              <h3>Self-improvement</h3>
+              <p class="text-muted">Learning is a never ending journey. We are always striving to grow.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-comments text-primary sr-icons"></i>
+              <h3>Passion</h3>
+              <p class="text-muted">We love to make people's lives better. Passion is what moves us.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="no-padding">
+      <div class="container-fluid">
+        <div class="row no-gutter">
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/company/1.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/company/2.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/company/3.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/company/4.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/company/5.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/company/6.jpg" class="img-responsive" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-lg-offset-1 text-center">
+            <h2 class="section-heading">Vue.js Berlin</h2>
+            <hr class="primary">
+            <p>
+              We proudly organize the Vue.js Berlin meetup.
+            </p>
+            <a href="https://www.meetup.com/Vue-js-Berlin/" rel="nofollow" class="btn btn-primary btn-xl sr-button" target="_blank">Check out Meetup Page</a>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <h2 class="section-heading">Blog</h2>
+            <hr class="primary">
+            <p>
+              We maintain an engineering blog where we post some cool stuff.
+            </p>
+            {{ range first 1 (where .Data.Pages "Type" "post") }}
+              <a href="{{ .Permalink }}" class="btn btn-primary btn-xl sr-button">Check out Eng Blog</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark">
+      <div class="container text-center">
+        <div class="call-to-action">
+          <h2>Join the team</h2>
+          <a href="https://fromatob.workable.com" class="btn btn-default btn-xl sr-button" rel="nofollow">View open positions</a>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

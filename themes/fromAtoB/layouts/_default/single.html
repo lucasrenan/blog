@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  {{ partial "head.html" . }}
+
+  <body id="page-top">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W323XNJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {{ partial "nav.html" . }}
+
+    {{ if eq .Type "post" }}
+      {{ partial "post.html" . }}
+    {{ else if eq .Type "page" }}
+      {{ partial "page.html" . }}
+    {{ else }}
+      NO MATCHING PARTIAL
+    {{ end }}
+
+    <section class="bg-dark">
+      <div class="container text-center">
+        <div class="call-to-action">
+          <h2>Join the team</h2>
+          <a href="https://fromatob.workable.com" class="btn btn-default btn-xl sr-button" rel="nofollow">View open positions</a>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

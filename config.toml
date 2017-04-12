@@ -1,6 +1,7 @@
 languageCode = "en-us"
 title = "fromAtoB Engineering"
 baseurl = "https://eng.fromatob.com/"
+theme = "fromAtoB"
 
 [Author]
   github = "fromAtoB"

@@ -1,0 +1,35 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+  {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+  {{ end }}
+
+  <link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+
+  <link href="{{ .Site.BaseURL }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ .Site.BaseURL }}vendor/highlight/css/railscasts.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="{{ .Site.BaseURL }}css/main.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  <script src="{{ .Site.BaseURL }}vendor/highlight/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ .URL }}" />
+  <meta property="og:image" content="{{ .Site.Params.logo }}" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N8C6DN2');</script>
+  <!-- End Google Tag Manager -->
+</head>

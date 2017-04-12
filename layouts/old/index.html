@@ -17,7 +17,7 @@
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               <div class="page-heading">
-                <h1>{{.Site.Title}}</h1>
+                <h1>{{.Site.Title}} index</h1>
                 {{if .Site.Params.subtitle}}
                   <hr class="small">
                   <span class="page-subheading">{{.Site.Params.subtitle}}</span>
@@ -39,23 +39,23 @@
             <article class="post-preview">
               <a href="{{ .Permalink }}">
           	  <h2 class="post-title">{{ .Title }}</h2>
-          	
+
           	  {{ if .Params.subtitle }}
           	  <h3 class="post-subtitle">
           	    {{ .Params.subtitle }}
           	  </h3>
-          	  {{ end }}  
+          	  {{ end }}
               </a>
 
               <p class="post-meta">
                 Posted on {{ .Date.Format "January 2, 2006" }}
               </p>
-            
+
               <div class="post-entry">
                 {{ .Summary }}
           	  <a href="{{ .Permalink }}" class="post-read-more">[Read&nbsp;More]</a>
               </div>
-            
+
              </article>
             {{ end }}
           </div>

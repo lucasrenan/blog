@@ -1,0 +1,11 @@
+<header class="post-header">
+  <div class="header-content">
+    <div class="header-content-inner">
+      <h1>{{ if .Title }}{{ .Title }}{{ else }}<br/>{{ end }}</h1>
+      {{ if .Params.subtitle }}
+        <hr>
+        <p>{{ .Params.subtitle }}</p>
+      {{ end }}
+    </div>
+  </div>
+</header>
