@@ -9,5 +9,3 @@ Rebuild site with `hugo`
 Add new posts with `hugo new`
 
 Run a local webserver (with reloading) with `hugo server`
-
-This uses a fork of http://themes.gohugo.io/beautifulhugo/
