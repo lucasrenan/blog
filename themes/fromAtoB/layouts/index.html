@@ -4,10 +4,7 @@
   {{ partial "head.html" . }}
 
   <body id="page-top">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W323XNJ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    {{- partial "gtm_iframe.html" -}}
 
     {{ partial "nav.html" . }}
 
@@ -125,22 +122,13 @@
             <p>
               We maintain an engineering blog where we post some cool stuff.
             </p>
-            {{ range first 1 (where .Data.Pages "Type" "post") }}
-              <a href="{{ .Permalink }}" class="btn btn-primary btn-xl sr-button">Check out Eng Blog</a>
-            {{ end }}
+            <a href="{{ .Site.BaseURL }}/blog" class="btn btn-primary btn-xl sr-button">Check out Eng Blog</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-dark">
-      <div class="container text-center">
-        <div class="call-to-action">
-          <h2>Join the team</h2>
-          <a href="https://fromatob.workable.com/" class="btn btn-default btn-xl sr-button" rel="nofollow">View open positions</a>
-        </div>
-      </div>
-    </section>
+    {{- partial "work-with-us.html" -}}
 
     {{ partial "footer.html" . }}
   </body>

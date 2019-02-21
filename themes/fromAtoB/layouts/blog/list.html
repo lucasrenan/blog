@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  {{ partial "head.html" . }}
+
+  <body id="page-top">
+    {{- partial "gtm_iframe.html" -}}
+
+    {{ partial "nav.html" . }}
+
+    <header class="post-header">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1>{{ if .Title }}{{ .Title }}{{ end }}</h1>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-list">
+              {{ $pag := .Paginate (where .Site.RegularPages "Type" "post") }}
+              {{ range $pag.Pages }}
+              <article class="post-preview">
+                <a href="{{ .Permalink }}">
+                  <h2 class="post-title">{{ .Title }}</h2>
+                </a>
+
+                <p class="post-meta">
+                  Posted on {{ .Date.Format "January 2, 2006" }}
+                </p>
+
+                <div class="post-entry">
+                  {{ .Summary }}
+                <a href="{{ .Permalink }}" class="post-read-more">[Read&nbsp;More]</a>
+                </div>
+
+               </article>
+              {{ end }}
+            </div>
+
+            {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+            <ul class="pager main-pager">
+              {{ if .Paginator.HasPrev }}
+              <li class="previous">
+                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">&larr; Newer Posts</a>
+              </li>
+              {{ end }}
+              {{ if .Paginator.HasNext }}
+              <li class="next">
+                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">Older Posts &rarr;</a>
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{- partial "work-with-us.html" -}}
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>
