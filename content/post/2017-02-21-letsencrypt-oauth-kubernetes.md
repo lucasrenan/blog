@@ -22,7 +22,7 @@ Next, we wanted to migrate our internal services to run within Kubernetes, too -
 but we did not have an easy solution to managing Ingress. The Rails application
 ran as a `NodePort` service connected to a terraform managed GCP HTTP Load Balancer,
 which had all of our main site SSL certificates. Marrying this setup to Let's Encrypt
-would not have been very easy, as the GCP HTTP Load Balancer does not support TLS-SNI 
+would not have been very easy, as the GCP HTTP Load Balancer does not support TLS-SNI
 (at the time of this article).
 
 ### TLS-SNI and Google Cloud Platform Woes
@@ -205,7 +205,3 @@ Going forward, we want to investigate setting up <a rel="nofollow" href="https:/
 automatically provision DNS records from the very same
 `Ingress` resources that manage everything else, and switch our main production site to use the same style of
 ingress as everything else within Kubernetes.
-
-<hr>
-
-_Want to work with Ian? <a href="mailto:join-our-team@fromatob.com">Say Hi!</a>_
