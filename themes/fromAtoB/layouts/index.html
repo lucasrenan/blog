@@ -4,7 +4,7 @@
   {{ partial "head.html" . }}
 
   <body id="page-top">
-    {{- partial "gtm_iframe.html" -}}
+    {{- partial "gtm_iframe.html" . -}}
 
     {{ partial "nav.html" . }}
 
@@ -128,7 +128,7 @@
       </div>
     </section>
 
-    {{- partial "work-with-us.html" -}}
+    {{- partial "work-with-us.html" . -}}
 
     {{ partial "footer.html" . }}
   </body>

@@ -4,7 +4,7 @@
   {{ partial "head.html" . }}
 
   <body id="page-top">
-    {{- partial "gtm_iframe.html" -}}
+    {{- partial "gtm_iframe.html" . -}}
 
     {{ partial "nav.html" . }}
 
@@ -16,7 +16,7 @@
       NO MATCHING PARTIAL
     {{ end }}
 
-    {{- partial "work-with-us.html" -}}
+    {{- partial "work-with-us.html" . -}}
 
     {{ partial "footer.html" . }}
   </body>
