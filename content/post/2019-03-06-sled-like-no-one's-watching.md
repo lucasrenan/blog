@@ -25,13 +25,13 @@ It was a refreshing exprience with the splash of ice down my top after the fifth
 
 ## Extreme learning
 
-We rolled straight into learning mode again with Tobias' validation talk which was applicable to our application ...how?
+We rolled straight into learning mode again with Tobias' validation talk which was applicable to our application and probably for all rails applications. Validations can be different based on the context so do validations they really belong into models? Tobias showed some alternetive solutions and gave us a little excursion into Elixir land.
 
-Andy proudly represented us with his lightning talk topic: 'How to give fantastic code reviews'. This was a great initiative as we can hear straight from the community.
+Andy proudly represented us with his lightning talk topic: 'How to give fantastic code reviews'. This was a very exciting experience and we got a lot of great feedback straight from the community.
 
 ## Our review
 
-Overall, we would give the conference a 4/5 star rating. It was interactive, chill and informative with a one talk, one break structure. However it was a shame that 80% of the topics were not Ruby specific.
+Overall, we would give the conference a 4/5 star rating. It was interactive, chill and informative with a one talk, one break structure. We would which for more Ruby specific talks. We are looking forward to see the talks recordings online.
 
 
 
