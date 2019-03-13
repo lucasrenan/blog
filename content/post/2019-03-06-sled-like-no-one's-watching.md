@@ -1,7 +1,7 @@
 ---
 title: "Sled like no one's watching: Ruby on Ice Conference 2019"
 date: 2019-03-06
-author: Mandy Lan Andreas Soiron
+author: Mandy Lan + Andreas Soiron
 Instagram: fromatob_engineering
 ---
 ![image](/brand.jpg)
@@ -27,7 +27,7 @@ It was a refreshing exprience with the splash of ice down my top after the fifth
 
 ### Extreme validations
 
-We rolled straight into learning mode again with Tobias' validation talk which was applicable to our application and probably for all rails applications. Validations can be different based on the context so do validations they really belong into models? Tobias showed some alternetive solutions and gave us a little excursion into Elixir land.
+We rolled straight into learning mode again with Tobias Pfeiffer's validation talk which was applicable to our application and probably for all rails applications. Validations can be different based on the context so do validations they really belong into models? Tobias showed some alternetive solutions and gave us a little excursion into Elixir land.
 
 Andy proudly represented us with his lightning talk topic: 'How to give fantastic code reviews'. This was a very exciting experience and we got a lot of great feedback straight from the community.
 
@@ -35,6 +35,8 @@ Andy proudly represented us with his lightning talk topic: 'How to give fantasti
 
 ### Our review
 
-Overall, we would give the conference a 4/5 ruby rating. It was interactive, chill and informative with a one talk, one break structure. We would which for more Ruby specific talks. We are looking forward to see the talks recordings online.
-
 ![Example image](/review.jpg)
+
+Overall, we would give the conference a 4/5 ruby rating. We liked that it was interactive, chill and informative with a one talk, one break structure. Also, we noticed that 80% of the speakers were women. How's that for diversity! In spite of that, we felt that the talks were not specific enough to the Ruby Language. Once the recordings we will post them here. Watch this space.
+
+Mandy + Andy
