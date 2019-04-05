@@ -1,6 +1,6 @@
 ---
 title: "Golang for Rubyists Part 1: Typing"
-date: 2014-07-11
+date: 2019-04-04
 author: Alex Fong
 github: actfong
 Instagram: fromatob_engineering
