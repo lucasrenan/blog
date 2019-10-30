@@ -39,9 +39,6 @@ p {
 section {
   padding: 100px 0;
 }
-section.post-content {
-  padding-top: 50px;
-}
 .no-padding {
   padding: 0;
 }
@@ -62,7 +59,6 @@ section.post-content {
   content: url('../img/logo-gray.svg');
   height: 100%;
   width: auto;
-  padding: 10px 10px 6px 10px;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
@@ -141,7 +137,7 @@ section.post-content {
     color: #3B99FC;
   }
 }
-.home-header {
+header {
   position: relative;
   width: 100%;
   min-height: auto;
@@ -154,32 +150,32 @@ section.post-content {
   text-align: center;
   color: white;
 }
-.home-header .header-content {
+header .header-content {
   position: relative;
   text-align: center;
   padding: 100px 15px 100px;
   width: 100%;
 }
-.home-header .header-content .header-content-inner h1 {
+header .header-content .header-content-inner h1 {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 30px;
 }
-.home-header .header-content .header-content-inner hr {
+header .header-content .header-content-inner hr {
   margin: 30px auto;
 }
-.home-header .header-content .header-content-inner p {
+header .header-content .header-content-inner p {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   margin-bottom: 50px;
 }
 @media (min-width: 768px) {
-  .home-header {
+  header {
     min-height: 100%;
   }
-  .home-header .header-content {
+  header .header-content {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -187,45 +183,20 @@ section.post-content {
     transform: translateY(-50%);
     padding: 0 50px;
   }
-  .home-header .header-content .header-content-inner {
+  header .header-content .header-content-inner {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
-  .home-header .header-content .header-content-inner h1 {
+  header .header-content .header-content-inner h1 {
     font-size: 50px;
   }
-  .home-header .header-content .header-content-inner p {
+  header .header-content .header-content-inner p {
     font-size: 18px;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
-}
-.post-header {
-  position: relative;
-  width: 100%;
-  min-height: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-image: url('../img/header.jpg');
-  text-align: center;
-  color: white;
-}
-.post-header .header-content {
-  position: relative;
-  text-align: center;
-  padding: 100px 15px 100px;
-  width: 100%;
-}
-.post-header .header-content .header-content-inner h1 {
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 36px;
 }
 .section-heading {
   margin-top: 0;
