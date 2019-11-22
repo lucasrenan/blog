@@ -75,7 +75,7 @@ It is configurable also. If you need to know more on how to tweak its configurat
 
 Adding bootsnap will improve boot time for all environments.
 
-Bootsnap comes by default on Rails 6+.
+Bootsnap comes by default on Rails 5.2+.
 
 We still can improve more for local development...
 
